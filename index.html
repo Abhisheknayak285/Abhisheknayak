@@ -247,19 +247,22 @@
 
         /* Glass Card Base */
         .card {
-            background: var(--bg-surface);
+            background: rgba(14, 14, 18, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 30px;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
         }
         
         .card:hover {
             border-color: var(--border-hover);
             transform: translateY(-5px);
-            box-shadow: var(--card-shadow);
+            box-shadow: 0 15px 35px -5px rgba(139, 92, 246, 0.15);
         }
 
         header {
@@ -417,17 +420,35 @@
         
         .hero-image-wrapper {
             position: relative;
-            width: 400px;
-            height: 450px;
-            border-radius: 20px;
+            width: 380px;
+            height: 380px;
+            border-radius: 30px;
             overflow: hidden;
             background: var(--bg-surface);
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color);
             z-index: 2;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            transition: var(--transition);
+        }
+
+        .hero-image-wrapper:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-wrapper:hover img {
+            transform: scale(1.05);
         }
 
         .hero-image-wrapper i {
@@ -928,21 +949,21 @@
                     
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="B.Tech(CSE)NayakAbhishekShrinivash.pdf" target="_blank" class="btn btn-secondary">Download Resume <i class="fas fa-download"></i></a>
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Abhisheknayak285" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="mailto:contact@domain.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:contact@abhisheknayak.com" class="social-link"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
                 <div class="hero-visual reveal" style="transition-delay: 0.2s;">
                     <div class="visual-accent"></div>
                     <div class="hero-image-wrapper">
-                        <!-- Abstract placeholder for developer image -->
-                        <i class="fas fa-laptop-code"></i>
+                        <!-- Profile Image with a fallback to your initials if profile.jpg is missing -->
+                        <img src="profile.jpg" alt="Abhishek Nayak" onerror="this.src='https://ui-avatars.com/api/?name=Abhishek+Nayak&background=3b82f6&color=fff&size=512'">
                     </div>
                 </div>
             </div>
@@ -1073,8 +1094,8 @@
                             <span class="tag">Netlify</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Abhisheknayak285" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://antextshare.my/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -1093,27 +1114,8 @@
                             <span class="tag">EmailJS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card card reveal" style="transition-delay: 0.2s;">
-                    <div class="project-img-wrapper">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>File Encrypt & Decrypt</h3>
-                        <p>A secure web-based utility for encrypting and decrypting sensitive files using Advanced Encryption Standard (AES) cryptography.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">AES</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Abhisheknayak285" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://archatsweb.netlify.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -1199,7 +1201,7 @@
         <div class="container footer-content reveal">
             <a href="#hero" class="logo">Abhishek<span style="color: var(--accent-primary);">.</span></a>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/Abhisheknayak285" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             </div>
